@@ -1,0 +1,60 @@
+<div class="main-section">
+    <div class="first-child">
+        <ul id="dropdown-ul">
+            <li class="create-btn">
+                <a href="practice">
+                    <i class="fa fa-plus"></i>
+                    <text>Create Contact</text>
+                </a>
+            </li>
+            <li class="dropdown-li">
+                <a href="/">
+                    <i class="fa fa-user"></i>
+                    <text>Contact</text>
+                </a>
+            </li>
+            <li class="dropdown-li">
+                <a href="">
+                    <i class="fa fa-star"></i>
+                    <text>Favourite Contact</text>
+                </a>
+            </li>
+            <li class="dropdown-li">
+                <a href="">
+                    <i class="fa fa-trash"></i>
+                    <text>Trash</text>
+                </a>
+            </li>
+        </ul>
+        <hr>
+        <!-- form moved to practice page -->
+    </div>
+    <div class="second-child">
+        <div class="new-contact-fill">
+            <div class="close"><a href="/"><i class="fa-solid fa-xmark"></i></a></div>
+            <form action="/create-contact" method="post">
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="name" placeholder="Enter Name" class="form-control2" id="inputEmail3" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Phone</label>
+                    <div class="col-sm-10">
+                        <input type="number" name="phone" placeholder="Enter Phone Number" min="10" class="form-control2" id="inputEmail3" required>
+                    </div>
+                    </div>
+                    <div class="row mb-3">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" name="email" placeholder="Enter Email Id" class="form-control2" id="inputEmail3">
+                    </div>
+                    </div>
+                
+                
+                <button type="submit" class="btn-submit">Save</button>
+                </form>
+        </div>
+    </div>
+</div>

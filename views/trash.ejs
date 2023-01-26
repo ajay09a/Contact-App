@@ -1,0 +1,59 @@
+<div class="main-section">
+    <div class="first-child">
+        <ul id="dropdown-ul">
+            <li class="create-btn">
+                <a href="practice">
+                    <i class="fa fa-plus"></i>
+                    <text>Create Contact</text>
+                </a>
+            </li>
+            <li class="dropdown-li">
+                <a href="/">
+                    <i class="fa fa-user"></i>
+                    <text>Contact</text>
+                </a>
+            </li>
+            <li class="dropdown-li">
+                <a href="fav">
+                    <i class="fa fa-star"></i>
+                    <text>Favourite Contact</text>
+                </a>
+            </li>
+            <li class="dropdown-li">
+                <a href="">
+                    <i class="fa fa-trash"></i>
+                    <text>Trash</text>
+                </a>
+            </li>
+        </ul>
+        <hr>
+        <!-- form moved to practice page -->
+    </div>
+    <div class="second-child">
+        <ul id="contact-details">
+            <li class="header-contact">
+                <div class="name">Name</div>
+                <div class="phone_number">Phone Number</div>
+                <div class="email">Email</div>
+                <div class="more"><i class="fa fa-ellipsis-vertical"></i></div>
+            </li>
+            <hr>
+            <div><p>Contacts(<%= trash_contact_list.length %>)</p></div>
+            <% for(let i of trash_contact_list){ %>
+                <li class="contact-details-items">
+                    <div class="name"><i class="fa fa-user"></i><text><%= i.name %></text></div>
+                    <div class="phone_number"><p><%= i.phone %></p></div>
+                    <div class="email"><p><%= i.email %></p></div>
+                    <div class="more hide">
+                        <a href="/restore-contact/?id=<%= i._id %>&name=<%= i.name %>&phone=<%= i.phone %>&email=<%= i.email %>">
+                            <i class="fa fa-rotate-left"></i>
+                        </a>
+                        <a href="/delete-contact-permanent/?id=<%= i._id %>&phone=<%= i.phone %>">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </div>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+</div>
